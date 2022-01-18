@@ -51,3 +51,14 @@ botondesencriptar.addEventListener("click",function(event){
     var y = document.getElementById("msg");
     y.value = desencriptar(x.value);
 });
+
+
+var botoncopiar = document.querySelector("#btn-copy");
+
+botoncopiar.addEventListener("click",function(event){
+    event.preventDefault();
+    var y = document.getElementById("msg");
+    console.log(y.value);
+    y.select();
+    navigator.clipboard.writeText(y.value)
+});
