@@ -57,8 +57,10 @@ var botoncopiar = document.querySelector("#btn-copy");
 
 botoncopiar.addEventListener("click",function(event){
     event.preventDefault();
+    var x = document.getElementById("input-texto");
     var y = document.getElementById("msg");
     console.log(y.value);
     y.select();
-    navigator.clipboard.writeText(y.value)
+    navigator.clipboard.writeText(y.value);
+    x.value = "";
 });
